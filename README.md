@@ -5,3 +5,4 @@ I'm learning scripting for Foundry VTT
 * Wisdom Save - Offers a wisdom saving throw to selected players.
 ## References
 https://foundryvtt.com/article/macros/ - very basic scripts on how to select actors.
+https://github.com/foundry-vtt-community/macros - Various that variously work.
