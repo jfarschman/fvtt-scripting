@@ -27,7 +27,7 @@ await Dialog.prompt({
           .spriteOffset({ x: 0, y: 0 })
           .opacity(0.5)
           .file(selectedEffect)
-          .atLocation(token)
+          .attachTo(token)
           .scale(0.5)
           .persist()
          .play()
