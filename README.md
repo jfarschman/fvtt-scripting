@@ -11,5 +11,6 @@ I'm learning scripting for Foundry VTT
 * https://foundryvtt.com/article/macros/ - very basic scripts on how to select actors.
 * https://github.com/foundry-vtt-community/macros - Various that variously work.
 * [DnD5e Active Affects Reference](https://hackmd.io/@foundryvtt-dnd5e/active-effects) - where do yu read and write data.
+* [Cymric's](https://gitlab.com/crymic/foundry-vtt-macros/-/tree/8.x/Callback%20Macros?ref_type=heads) - Mostly 3 years old and older
 * [KeKilla](https://github.com/Kekilla0/Personal-Macros/tree/master) - Higher level work
 * [Kandashis Active Effect Guide](https://docs.google.com/document/d/1DuZaIFVq0YulDOvpahrfhZ6dK7LuclIRlGOtT0BIYEo/edit#heading=h.vfzevnk5ryre)
