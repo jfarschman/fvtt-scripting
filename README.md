@@ -8,5 +8,6 @@ I'm learning scripting for Foundry VTT
 ## Cheat in Chat
 * [[/r d20+@skills.wis.total # Corruption Check]]{Corruption Check} - calls for a wisdom save but does not ecaluate it.
 ## References
-https://foundryvtt.com/article/macros/ - very basic scripts on how to select actors.
-https://github.com/foundry-vtt-community/macros - Various that variously work.
+* https://foundryvtt.com/article/macros/ - very basic scripts on how to select actors.
+* https://github.com/foundry-vtt-community/macros - Various that variously work.
+* [Kandashis Active Effect Guide](https://docs.google.com/document/d/1DuZaIFVq0YulDOvpahrfhZ6dK7LuclIRlGOtT0BIYEo/edit#heading=h.vfzevnk5ryre)
