@@ -6,8 +6,9 @@ I'm learning scripting for Foundry VTT
 * Random Actor - Pick a random actor from those selected.
 * Wisdom Save - Offers a wisdom saving throw to selected players.
 
-## Cheat in Chat
-* [[/r d20+@skills.wis.total # Corruption Check]]{Corruption Check} - calls for a wisdom save but does not ecaluate it.
+## Chat Cheats for dice rolls
+* [[/r d20+@skills.wis.total # Wisdom Check]]{Wisdom Check} - calls for a wisdom save but does not evaluate it.
+* 
 ## References
 * https://foundryvtt.com/article/macros/ - very basic scripts on how to select actors.
 * https://github.com/foundry-vtt-community/macros - Various that variously work.
