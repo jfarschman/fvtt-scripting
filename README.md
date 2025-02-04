@@ -5,6 +5,7 @@ I'm learning scripting for Foundry VTT
 * Khul Protections - Azarr Khul applies a protective shield to himself.
 * Light a Torch - Checks if you have one available and then lights it... illuminating the scene around you.
 * Magical Field - Apply magical field around a target.
+* Passive Perception - whisper the PP of players in a folder
 * Raging Dwarf - Manages homebrew condition where a magical item invigorates a character with rage, strength etc.
 * Random Actor - Pick a random actor from those selected.
 * Wisdom Save - Offers a wisdom saving throw to selected players.
