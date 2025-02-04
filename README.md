@@ -8,6 +8,7 @@ I'm learning scripting for Foundry VTT
 * Passive Perception - whisper the PP of players in a folder
 * Raging Dwarf - Manages homebrew condition where a magical item invigorates a character with rage, strength etc.
 * Random Actor - Pick a random actor from those selected.
+* Teleport Tokens - who talking to a new location on the map without dragging them.
 * Wisdom Save - Offers a wisdom saving throw to selected players.
 
 ## Chat Cheats for dice rolls
