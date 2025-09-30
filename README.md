@@ -1,5 +1,6 @@
 # fvtt-scripting
 I'm learning scripting for Foundry VTT
+* Actor-Converter.py - Create DH adversaries (DnD5e v5.1.2 into DH v1.1.2) - This script converts DnD actor json into DH features and adversaries that must then be manually imported.
 * Apply Aura - Uses Sequencer to apply a small set of curated J2BA effects on tokens
 * Extract_data.py - Convert 5e to DaggerHeart. Export data from items into inputs_5e directory, then run this to make a single text file (conversion-sheet.txt).
 * Khul Powers - Azarr Khul is pulling powers from the FANE
