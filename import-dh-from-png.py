@@ -41,8 +41,7 @@ def get_dh_adversary_template():
 
 def parse_text_from_ocr(text):
     """
-    Parses raw text from OCR into a structured dictionary,
-    now tailored to the provided stat block format.
+    Parses raw text from OCR, now capable of handling multiple stat block formats.
     """
     parsed_data = {}
     lines = [line.strip() for line in text.split('\n') if line.strip()]
@@ -56,7 +55,6 @@ def parse_text_from_ocr(text):
         parsed_data['tier'] = int(tier_match.group(1))
         parsed_data['type'] = tier_match.group(2).lower()
 
-    # The main description is the line directly after the Tier/Type
     parsed_data['description'] = lines[2] if len(lines) > 2 else ""
 
     # --- KEY-VALUE PAIRS ---
@@ -88,10 +86,9 @@ def parse_text_from_ocr(text):
     # --- FEATURES ---
     parsed_data['features'] = []
     
-    # Add the ATK line as a feature if it exists
     attack_match = re.search(r"ATK:\s*(.*)", text, re.IGNORECASE)
     if attack_match:
-        full_attack_string = attack_match.group(1).strip()
+        full_attack_string = attack_match.group(1).strip().replace("|", "&brvbar;") # Use HTML entity for pipe
         parsed_data['features'].append({"name": "Attack", "description": f"<p>{full_attack_string}</p>"})
 
     try:
@@ -101,20 +98,27 @@ def parse_text_from_ocr(text):
         for block in feature_blocks:
             if not block: continue
             
-            # Split feature name from description at the first colon
-            if ':' in block:
-                name, description = block.split(':', 1)
-                parsed_data['features'].append({
-                    "name": name.strip(),
-                    "description": f"<p>{description.strip()}</p>"
-                })
+            # ⭐ BUG FIX: Add logic to handle different feature formats.
+            name, description = "", ""
+            if ':' in block and not block.startswith("ATK"): # Clurichaun format: "Name: Description" on one line.
+                parts = block.split(':', 1)
+                name = parts[0].strip()
+                description = parts[1].strip()
+            else: # Ghast format: Name on the first line, description on the rest.
+                block_lines = block.strip().split('\n')
+                if block_lines:
+                    name = block_lines[0].strip()
+                    description = ' '.join(block_lines[1:]).strip()
+
+            if name and description: # Ensure we have both parts before adding.
+                parsed_data['features'].append({ "name": name, "description": f"<p>{description}</p>"})
+
     except (IndexError, AttributeError):
         print("  - INFO: No primary 'FEATURES' section found.")
 
     return parsed_data
 
 # --- JSON Generation Logic ---
-
 def create_feature_json(feature_data):
     """Creates a Daggerheart feature JSON from parsed data."""
     feature = get_dh_feature_template()
@@ -158,7 +162,6 @@ def create_adversary_json(parsed_data, converted_features):
     return adversary
 
 # --- Main Processing Logic ---
-
 def sanitize_filename(name):
     """Removes invalid characters from a string to make it a valid filename."""
     name = re.sub(r'[\\/*?:"<>|,]', "", name).replace(" ", "_")
