@@ -1,12 +1,12 @@
 # fvtt-scripting
 I'm learning scripting for Foundry VTT
-* Actor-Converter.py - Create DH adversaries (DnD5e v5.1.2 into DH v1.1.2) - This script converts DnD actor json into DH features and adversaries that must then be manually imported.
+* Actor-Converter.py - Create Daggerheart adversaries (DnD5e v5.1.2 into Foundryborne v1.1.2) - This script converts DnD actor json into DH features and adversaries that must then be manually imported. [woefully outdated]
 * Apply Aura - Uses Sequencer to apply a small set of curated J2BA effects on tokens
 * Extract_data.py - Convert 5e to DaggerHeart. Export data from items into inputs_5e directory, then run this to make a single text file (conversion-sheet.txt).
 * harvest-features.js - Macro that harvests fondryborne 1.5.4 features for use with a PDF adversary to foundry json tool
 * import-dh-from-png.py - takes graphical statblocks using tesseract and converts them into features and adversary .json files for import into FoundryVTT foundryborne/daggerheart v1.1.2.
-* Khul Powers - Azarr Khul is pulling powers from the FANE
-* Khul Protections - Azarr Khul applies a protective shield to himself.
+* Khul Powers - Azarr Khul is the BBEG in the Red Hand of Doom. This is  visual effect that represents how he pulls powers from the FANE
+* Khul Protections - Azarr Khul shields himself and is invulnerable until the party addresses the source of his magic. This is his shield effect.
 * Light a Torch - Checks if you have one available and then lights it... illuminating the scene around you.
 * Magical Field - Apply magical field around a target.
 * Passive Perception - whisper the PP of players in a folder
